@@ -36,7 +36,7 @@ function countdown(){
 
       say.classList.add("rainbow-text")
       say.innerHTML = "Happy Birthday 🎈🎉"
-      document.body.style.backgroundImage = "url('birthday.jpg')";
+      document.body.style.backgroundImage = "url('birthday.web')";
 
 
     }
