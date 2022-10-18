@@ -6,7 +6,7 @@ const say = document.querySelector(".status")
 
 
 
-const newYear = '22 Oct 2022';
+const newYear = '18 Oct 2022';
 
 
 function countdown(){
@@ -35,7 +35,7 @@ function countdown(){
       secondsEl.innerHTML = "00";
 
       say.classList.add("rainbow-text")
-      say.innerHTML = "Happy Birthday"
+      say.innerHTML = "Happy Birthday 🎈🎉"
       document.body.style.backgroundImage = "url('birthday.jpg')";
 
 
