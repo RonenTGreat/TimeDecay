@@ -2,9 +2,11 @@ const daysEl = document.getElementById("days")
 const hoursEl = document.getElementById("hours")
 const minsEl = document.getElementById("mins")
 const secondsEl = document.getElementById("seconds")
+const say = document.querySelector(".status")
 
 
-const newYear = '1 Jan 2022';
+
+const newYear = '22 Oct 2022';
 
 
 function countdown(){
@@ -22,6 +24,22 @@ function countdown(){
     hoursEl.innerHTML = formatTime(hours);
     minsEl.innerHTML = formatTime(mins);
     secondsEl.innerHTML = formatTime(seconds);
+
+    // Stops the countdown and display happy birthday
+    if (currentDate >= newYearDate) {
+      console.log("Happy Birthday");
+
+      daysEl.innerHTML = "00";
+      hoursEl.innerHTML = "00";
+      minsEl.innerHTML = "00";
+      secondsEl.innerHTML = "00";
+
+      say.classList.add("rainbow-text")
+      say.innerHTML = "Happy Birthday"
+      document.body.style.backgroundImage = "url('birthday.jpg')";
+
+
+    }
 }
 
 function formatTime(time){

@@ -1,47 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap");
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-image: url("new\ year.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+body {
+  background-image: url("new\ year.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 
-h1{
-    font-weight: normal;
-    font-size: 4rem;
-    margin-top: -10rem;
-    margin-top: 5rem;
+h1 {
+  font-weight: 600;
+  font-size: 5em;
+  text-align: center;
+  margin: 1em auto;
+  max-width: 20em;
+  line-height: 1em;
 }
 
-.countdown-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+h2{
+    font-size: 5rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(rgb(28, 210, 174), rgb(235, 187, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.big-text{
-    font-weight: bold;
-    font-size: 6rem;
-    line-height: 1;
-    margin: 1rem 2rem;
+.rainbow-text {
+  background: #ca4246;
+  background-color: #ca4246;
+  background: conic-gradient(
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+
+  background-size: 57%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
 }
 
-.countdown-el{
-    text-align: center;
+.rainbow-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
 }
 
-.countdown-el span{
-    font-size: 1.5rem;
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+
+.countdown-container {
+  margin: 4rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-text {
+  font-weight: bold;
+  font-size: 10rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
+
+.countdown-el {
+  text-align: center;
+}
+
+.countdown-el span {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 725px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .big-text {
+    font-size: 4.5rem;
+  }
+
+  h2{
+    font-size: 2rem;
+}
 }
