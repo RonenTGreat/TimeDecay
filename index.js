@@ -6,7 +6,7 @@ const say = document.querySelector(".status")
 
 
 
-const newYear = '18 Oct 2022';
+const newYear = '22 Oct 2022';
 
 
 function countdown(){
